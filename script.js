@@ -1,10 +1,12 @@
 let container = document.querySelector('.container')
 let button = document.createElement('button');
 let number;
+let body = document.querySelector('body')
+body.style.backgroundColor = 'rgba(169, 198, 224, 1)';
 document.body.prepend(button);
 
 button.textContent = 'NEW ART'
-button.setAttribute('style','color:red;background-color:yellow');
+button.setAttribute('style','color:red;background-color:yellow; font-size:60px;position:absolute;margin-left:40px;border-radius:25px;border:2px solid orange; padding:15px');
 
 for (i = 0; i<256; i ++){
     let allDivs = document.createElement('div');
@@ -34,7 +36,6 @@ function newGrid(){
         };
     }
 };
-
 button.addEventListener('click', newGrid);
 
 

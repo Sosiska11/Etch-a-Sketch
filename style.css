@@ -1,5 +1,5 @@
 div{
-    border:  1px solid red;
+    border:  1px solid rgba(0, 0, 0, 0.13);
 }
 
 .container {
@@ -8,6 +8,7 @@ div{
     flex-wrap: wrap;     /* переносить элементы на новую строку */
     width: 1000px;
     height: 900px;
+    background-color: aliceblue;
 }
 
 .container div {      /* 100% / 16 = 6.25% */
