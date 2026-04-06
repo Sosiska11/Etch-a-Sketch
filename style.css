@@ -1,0 +1,15 @@
+div{
+    border:  1px solid red;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;     /* переносить элементы на новую строку */
+    width: 1000px;
+    height: 900px;
+}
+
+.container div {      /* 100% / 16 = 6.25% */
+    box-sizing: border-box;  /* чтобы границы не увеличивали размер */
+}
