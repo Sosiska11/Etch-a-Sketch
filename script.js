@@ -8,15 +8,17 @@ document.body.prepend(button);
 button.textContent = 'NEW ART'
 button.setAttribute('style','color:red;background-color:yellow; font-size:60px;position:absolute;margin-left:40px;border-radius:25px;border:2px solid orange; padding:15px');
 
+//Default Grid
 for (i = 0; i<256; i ++){
     let allDivs = document.createElement('div');
     allDivs.style.width = (100 / 16) + '%'
     container.appendChild(allDivs);
     allDivs.addEventListener('mouseenter', () => {
-        allDivs.style.backgroundColor = 'black'
+        allDivs.style.backgroundColor = '#' + Math.random().toString(16).substr(-6); //From Stack Overflow
     })
 };
 
+//Users Grid
 function newGrid(){
     number = +prompt('Enter number of squares');
 
@@ -31,12 +33,10 @@ function newGrid(){
             allDivs.style.width = (100 / number) + '%' 
             container.appendChild(allDivs);
             allDivs.addEventListener('mouseenter', () => {
-                allDivs.style.backgroundColor = 'black'
+                allDivs.style.backgroundColor = (Math.random().toString(16).slice(-6))
             })
         };
     }
 };
+
 button.addEventListener('click', newGrid);
-
-
-
